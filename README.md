@@ -1,22 +1,14 @@
+An implementation of supervised machine learning with __k-nearest neighbour__ and __decision tree__ algorithm using the [Wine Data Set](https://archive.ics.uci.edu/ml/datasets/wine).
 
-This main README.md should contain sufficient information so that someone unfamiliar with your project could:
+## Author
 
-- understand the overall aim of the project
+Nazli Ozum Kafaee
 
-- be able to take your repository and reproduce your analysis on their machine.
+## Data
 
-Include:
+Data is from [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php). It consists of 178 observations, 13 attributes and 3 classes of wine.
 
-- aim of the project
+## Dependencies
 
-- authors/contributors
-
-- source of the data
-
-- software and all dependencies necessary to run the analysis
-
-- description of how the project is organized
-
-- instructions on how to reproduce the analysis
-
+## Directions
 
