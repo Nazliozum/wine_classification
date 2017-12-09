@@ -24,3 +24,22 @@ Nazli Ozum Kafaee
 
 ## Directions
 
+```
+python src/get_data.py https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data data/wine_data.csv
+```
+
+```
+python src/knn_cv.py data/wine_data.csv 7 results/optimum_k.txt
+```
+
+```
+python src/knn_testscore.py data/wine_data.csv results/optimum_k.txt results/accuracy_score_knn.txt
+```
+
+```
+python src/dtree_cv.py data/wine_data.csv 10 results/optimum_depth.txt
+```
+
+```
+python src/dtree_testscore.py data/wine_data.csv results/optimum_depth.txt results/accuracy_score_dtree.txt
+```
