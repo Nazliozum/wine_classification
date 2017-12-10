@@ -1,0 +1,25 @@
+---
+title: "Report"
+author: "Ozum"
+date: "December 9, 2017"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# INTRODUCTION
+
+# CLASSIFICATION
+
+## K Nearest Neighbour Model
+
+![](../results/accuracy_vs_k.png)
+## Decision Tree Model
+
+![](../results/tree.png)
+
+![](../results/feature_importances.png)
+
+# Conclusion
