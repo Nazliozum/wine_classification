@@ -30,10 +30,10 @@ There are 59 instances of class 1, 71 of class 2, and 48 of class 3. There are 1
 7) Flavanoids  
 8) Nonflavanoid phenols  
 9) Proanthocyanins  
-10)Color intensity  
-11)Hue  
-12)OD280/OD315 of diluted wines  
-13)Proline  
+10) Color intensity  
+11) Hue  
+12) OD280/OD315 of diluted wines  
+13) Proline  
 
 All atributes are continuous and there aren't any missing attributes.
 
@@ -71,4 +71,4 @@ My analysis concludes that the decision tree yields a highly better accuracy sco
 
 - [An Introduction to Machine Learning with Python](https://www.safaribooksonline.com/library/view/introduction-to-machine/9781449369880/) by Andreas C. Müller and Sarah Guido (O’Reilly). Copyright 2017 Sarah Guido and Andreas Müller, 978-1-449-36941-5.
 
-- [scikit-learn website](http://scikit-learn.org/stable/index.html)
+- [scikit-learn](http://scikit-learn.org/stable/index.html)
