@@ -61,7 +61,7 @@ export_graphviz(tree_model, out_file = "results/tree.dot", class_names = ["wine 
 def plot_feature_importances_wine(model):
     n_features = X.shape[1]
     plt.barh(range(n_features), model.feature_importances_, align='center')
-    plt.yticks(np.arange(n_features), X.feature_names)
+    plt.yticks(np.arange(n_features))
     plt.xlabel("Feature importance")
     plt.ylabel("Feature")
 

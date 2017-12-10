@@ -55,3 +55,22 @@ accuracy = str(accuracy_score(predictions, y_test))
 file = open(args.target_file, 'w')
 file.write(accuracy)
 file.close()
+
+
+# Plot the test accuracy just to see if we were right
+# in the choice of k-value through cross validation
+training_accuracy = []
+test_accuracy = []
+neighbors_settings = range(1, 50)
+
+for n_neighbors in neighbors_settings:
+    # build the model
+    wine = KNeighborsClassifier(n_neighbors = n_neighbors)
+    wine.fit(X_train, y_train)
+    # record generalization accuracy
+    test_accuracy.append(wine.score(X_test, y_test))
+
+plt.plot(neighbors_settings, test_accuracy)
+plt.ylabel('Test Accuracy')
+plt.xlabel('Number of Neighbors (k)')
+plt.savefig("results/testaccuracy_vs_k.png")

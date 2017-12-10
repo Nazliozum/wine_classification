@@ -41,7 +41,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, random_state=0)
 
 # Create odd list of k values
-neighbors = list(range(1,50,2))
+neighbors = list(range(1,50))
 
 # Create empty list that will hold cv scores for each k value
 cv_scores = []
@@ -68,5 +68,5 @@ file.close()
 # Plot accuracy vs k value and save as the plot as png
 plt.plot(neighbors, cv_scores)
 plt.xlabel('Number of Neighbors (k)')
-plt.ylabel('Accuracy')
-plt.savefig("results/accuracy_vs_k.png")
+plt.ylabel('Training Accuracy')
+plt.savefig("results/trainingaccuracy_vs_k.png")
