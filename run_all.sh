@@ -10,7 +10,7 @@
 # Get the data
 python src/get_data.py https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data data/wine_data.csv
 
-# Ge the optimum k value
+# Get the optimum k value
 python src/knn_cv.py data/wine_data.csv 7 results/optimum_k.txt
 
 # Get the test accuracy score for knn
