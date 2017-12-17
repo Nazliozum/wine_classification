@@ -1,5 +1,5 @@
 # Docker file for wine_classification
-# Nazli Ozum Kafaee, Dec, 2017
+# Nazli Ozum Kafaee, Dec 2017
 
 # use rocker/tidyverse as the base image and
 FROM rocker/tidyverse
@@ -20,7 +20,7 @@ RUN apt-get install -y python3-tk
 # install necessary python packages
 RUN pip3 install numpy
 RUN pip3 install pandas
-RUN pip3 install sklearn
+RUN pip3 install scikit-learn
 RUN pip3 install argparse
 RUN pip3 install graphviz
 
