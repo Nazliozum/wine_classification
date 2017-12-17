@@ -73,4 +73,4 @@ for n_neighbors in neighbors_settings:
 plt.plot(neighbors_settings, test_accuracy)
 plt.ylabel('Test Accuracy')
 plt.xlabel('Number of Neighbors (k)')
-plt.savefig("results/testaccuracy_vs_k.png")
+plt.savefig("results/figures/testaccuracy_vs_k.png")

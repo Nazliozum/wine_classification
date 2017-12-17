@@ -8,7 +8,7 @@
 #
 # Dependencies: argparse, pandas, numpy, sklearn.tree, sklearn.model_selection
 #
-# Usage: python dtree_cv.py data_file n_splits target_file
+# Usage: python dtree_cv.py data_file target_file
 
 # Import libraries
 from sklearn.tree import DecisionTreeClassifier
@@ -21,7 +21,6 @@ import argparse
 # Read in command line arguments
 parser = argparse.ArgumentParser()
 parser.add_argument('data_file')
-parser.add_argument('n_splits')
 parser.add_argument('target_file')
 args = parser.parse_args()
 
@@ -39,10 +38,9 @@ depth = list(range(1,50))
 # Create empty list that will hold cv scores
 cv_scores = []
 
-n_splits = int(args.n_splits)
 for n_depth in depth:
     mytree = DecisionTreeClassifier(max_depth = n_depth, random_state=0)
-    cv = ShuffleSplit(n_splits = n_splits, test_size = 0.25, random_state = 0)
+    cv = ShuffleSplit(n_splits = 10, test_size = 0.25, random_state = 0)
     scores = cross_val_score(mytree, X_train, y_train, cv = cv)
     cv_scores.append(scores.mean())
 

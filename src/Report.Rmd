@@ -1,8 +1,9 @@
 ---
-title: "Report"
+title: "Report - A Comparison between Knn and Decision Tree"
 author: "Ozum"
 date: "December 9, 2017"
-output: github_document
+output: html_document
+
 ---
 
 ```{r setup, include=FALSE}
@@ -41,13 +42,13 @@ All atributes are continuous and there aren't any missing attributes.
 
 In the KNN algorithm, I tried to choose the best k-value, i.e. the number of neighbours to consider through cross validation. The analysis determine 5 to be the k-value that gives the highest accuracy score in validation data. The change in training accuracy with regards to k-value can be seen below clearly with the max value corresponding to __k = 5__.
 
-![](../results/trainingaccuracy_vs_k.png)
+![](../results/figures/trainingaccuracy_vs_k.png)
 
 With 5 as my k-value, I applied the model to test data to get a test accuracy score. The result was 0.73. This communicates that my k-nearest neighbours model predicts the correct wine label __73%__ of the time.
 
 Just to see if we had really chosen a good k-value, we can plot test accuracy versus k-values. The plot below shows that k-values other than 5 actually yield more test accuracy than k = 5. However, of course we cannot change our model based on test accuracy. We fit our model to the training data set and get the final accuracy on test data. The plot below is just out of curiosity.
 
-![](../results/testaccuracy_vs_k.png)
+![](../results/figures/testaccuracy_vs_k.png)
 
 
 ## Decision Tree
@@ -60,7 +61,7 @@ In my analysis, I controlled for the maximum depth of the tree and found __3 to 
 
 By looking at the feature importances in the model, we can see that sixth, nineth and twelveth attributes which are "Total phenols", "Proanthocyanins" and "OD280/OD315 of diluted wines" repectively are the most important features in our model. The second attribute which is "Malic acid" is also important but less than the other three. In the model with depth 3, no other attribute gives any information for a meaningful split.
 
-![](../results/feature_importances.png)
+![](../results/figures/feature_importances.png)
 
 The test accuracy of the decision tree with depth 3 is 0.93 meaning this algorithm would predict the right wine class __93%__ of the time.
 

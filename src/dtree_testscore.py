@@ -54,7 +54,7 @@ tree_model = mytree.fit(X_train, y_train)
 
 
 # Make a visualization of the tree
-export_graphviz(tree_model, out_file = "results/tree.dot", class_names = ["wine 1", "wine 2", "wine 3"],
+export_graphviz(tree_model, out_file = "results/figures/tree.dot", class_names = ["wine 1", "wine 2", "wine 3"],
                 impurity=False, filled=True)
 
 # Make a visualization showing which features are more important
@@ -66,7 +66,7 @@ def plot_feature_importances_wine(model):
     plt.ylabel("Feature")
 
 plot_feature_importances_wine(mytree)
-plt.savefig("results/feature_importances.png")
+plt.savefig("results/figures/feature_importances.png")
 
 # Get accuracy score and write it to a text file
 predictions = mytree.predict(X_test)
