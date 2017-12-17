@@ -24,7 +24,4 @@ RUN pip3 install scipy
 RUN pip3 install scikit-learn
 RUN pip3 install argparse
 RUN pip3 install graphviz
-
-RUN apt-get update && \
-    pip3 install matplotlib && \
-    rm -rf /var/lib/apt/lists/*
+RUN pip3 install matplotlib
