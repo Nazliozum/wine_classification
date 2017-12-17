@@ -38,4 +38,3 @@ dependencies:
 - pip:
   - graphviz==0.8.1
 prefix: /anaconda/envs/wine_classification
-

@@ -16,7 +16,7 @@ The data is also available in current repository as [wine_data.csv](data/wine_da
 
 ## System Requirements
 
-* Python 3.6.1 and packages:
+* Python 3.6 and packages:
 	* scikit-learn==0.18.1
 	* pandas==0.20.1
 	* numpy==1.12.1
@@ -30,21 +30,43 @@ The data is also available in current repository as [wine_data.csv](data/wine_da
 
 ## Reproducing the Analysis
 
-```
-docker pull nazliozum/wine_classification
-```
+Clone this repository or download it. Then, `cd` to the project directory on your computer. The project directory already has the intermediate files of the analysis that has been run before. In order to clean the analysis and re-run it, first, run `make clean`.
+
+You can use two options to run the analysis. The directions for both are explained as follows:
+
+__Using conda environment:__
+
+Run the command below.
 
 ```
-
+conda env create -f environment.yml
 ```
 
-3) Run the following command on the command line to download the data.
+This will create the python environment required for the analysis. Then run the command below to carry out the analysis from top to bottom.
 
 ```
 make all
 ```
 
-Run the following commands in order to reproduce the analysis.
+__Using docker image:__
+
+If you have Docker installed on your computer, you can run the command below that will tell Docker to automatically download/pull the Docker image required for this analysis.
+
+```
+docker docker run --rm -it nazliozum/wine_classification
+```
+
+Now, your prompt should change to look something like this:
+
+```
+root@1fc309a08883:/#
+```
+
+Then `cd` into the `/home/wine_classification` directory and then run `make all`.
+
+Now, the whole analysis will run from top to bottom.
+
+You can use the command `exit` to exit the container and go back to your regular Shell.
 
 
 ## Author
