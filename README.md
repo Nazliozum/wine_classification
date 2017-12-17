@@ -30,47 +30,22 @@ The data is also available in current repository as [wine_data.csv](data/wine_da
 
 ## Reproducing the Analysis
 
-1) Download the `src` folder of this directory to your project directory on your local machine.
+```
+docker pull nazliozum/wine_classification
+```
 
-2) Set directory to your project folder on your local machine using the command line.
+```
+
+```
 
 3) Run the following command on the command line to download the data.
 
 ```
-python src/get_data.py https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data data/wine_data.csv
+make all
 ```
 
 Run the following commands in order to reproduce the analysis.
 
-4)
-
-```
-python src/knn_cv.py data/wine_data.csv 7 results/optimum_k.txt
-```
-
-5)
-
-```
-python src/knn_testscore.py data/wine_data.csv results/optimum_k.txt results/accuracy_score_knn.txt
-```
-
-6)
-
-```
-python src/dtree_cv.py data/wine_data.csv 10 results/optimum_depth.txt
-```
-
-7)
-
-```
-python src/dtree_testscore.py data/wine_data.csv results/optimum_depth.txt results/accuracy_score_dtree.txt
-```
-
-8)
-
-```
-dot -Tpng results/tree.dot -o results/tree.png
-```
 
 ## Author
 
