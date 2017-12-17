@@ -50,10 +50,10 @@ make all
 
 __Using docker image:__
 
-If you have Docker installed on your computer, you can run the command below that will tell Docker to automatically download/pull the Docker image required for this analysis.
+If you have Docker installed on your computer, you can run the command below that will tell automatically download/pull the Docker image required for this analysis. Don't forget to modify the `VOLUME_ON_YOUR_COMPUTER` part with the appropriate path to the project directory on your computer.
 
 ```
-docker docker run --rm -it nazliozum/wine_classification
+docker run --rm -it -v VOLUME_ON_YOUR_COMPUTER:/home/wine_classification nazliozum/wine_classification /bin/bash
 ```
 
 Now, your prompt should change to look something like this:
