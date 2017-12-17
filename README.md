@@ -16,12 +16,12 @@ The data is also available in current repository as [wine_data.csv](data/wine_da
 
 ## System Requirements
 
-* Python 3.6 and packages:
-	* sklearn
-	* pandas
-	* numpy
-	* argparse
-	* matplotlib 
+* Python 3.6.1 and packages:
+	* scikit-learn==0.18.1
+	* pandas==0.20.1
+	* numpy==1.12.1
+	* argparse==1.4.0
+	* matplotlib==2.0.2
 
 ## Dependency Diagram
 
